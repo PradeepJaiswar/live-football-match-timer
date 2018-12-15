@@ -1,0 +1,11 @@
+.un:after {
+  content: '';
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: #ffffff;
+  transition: 400ms;
+}
+.un_transition:after {
+  width: 100%;
+}
