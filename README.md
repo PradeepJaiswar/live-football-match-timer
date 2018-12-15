@@ -1,5 +1,7 @@
-# live football match timer
+# Live football match timer
 React component for showing live football match timer
+
+<img src="https://raw.githubusercontent.com/PradeepJaiswar/live-football-match-timer/master/match-timer.gif" width="200" height="200" >
 
 # Pre-requisites
 * [Git](http://git-scm.com/)
