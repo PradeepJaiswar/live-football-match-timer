@@ -8,6 +8,10 @@
     "start": "webpack-dev-server --config webpack.config.js --mode development",
     "build": "rimraf dist && webpack --config webpack.config.js --mode production"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PradeepJaiswar/live-football-match-timer"
+  },
   "keywords": ["LiveFootballMatcheTimer", "React", "live", "Football", "Match", "Timer"],
   "author": "Pradeep Jaiswar",
   "license": "ISC",
