@@ -1,6 +1,6 @@
 {
   "name": "live-football-match-timer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "https://github.com/PradeepJaiswar/live-football-match-timer",
   "main": "index.js",
   "scripts": {

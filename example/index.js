@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MatchTimer from '../src/components/match-timer';
 
-const matchObj = {
+const config = {
   matchDate: '2018/12/19',
   id: 'uniqueMatchIdentifier',
   startTime: '21:00',
@@ -19,11 +19,11 @@ class Example extends React.Component {
       <div className="container">
         <div className="card">
           <div className="header">
-            <MatchTimer matchObj={matchObj} />
+            <MatchTimer config={config} />
           </div>
           <div className="matchDetail">
             <div className="startTime">
-              Match start time is {matchObj.startTime}
+              Match start time is {config.startTime}
             </div>
             <div className="team">
               <span className="left"> Team 1 </span>

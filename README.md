@@ -20,7 +20,7 @@ Open [localhost:9000](http://locahost:9000)
 ```
 import MatchTimer from 'live-football-match-timer';
 
-const matchObj = {
+const config = {
   matchDate: '2018/12/12',
   id: '23',
   startTime: '13:00',
@@ -35,7 +35,7 @@ class YourComponent extends React.Component {
   render() {
     return (
       <div >
-        <MatchTimer matchObj={matchObj} />
+        <MatchTimer config={config} />
       </div>
     );
   }
@@ -44,7 +44,7 @@ class YourComponent extends React.Component {
 
 # Config
 
-You can custmize matchObj param pass to component
+You can custmize config param pass to component
 
 ## Required params
 

@@ -19,7 +19,7 @@ class MatchTimer extends React.Component {
     this.liveDiv = null;
     this.countdownTimer = null;
     this.seconds = 1; // set timer to start from one second
-    this.live = matchTimerCalculator(props.matchObj); // set match state
+    this.live = matchTimerCalculator(props.config); // set match state
     this.timer = this.timer.bind(this);
     this.setClockInterval = this.setClockInterval.bind(this);
   }
@@ -33,7 +33,7 @@ class MatchTimer extends React.Component {
     }
   }
   setClockInterval() {
-    this.timerDiv = document.getElementById(`${this.props.matchObj.id}-countdown`);
+    this.timerDiv = document.getElementById(`${this.props.config.id}-countdown`);
     this.countdownTimer = setInterval(this.timer, 1000);
     this.timerStarted = true;
   }
@@ -57,7 +57,7 @@ class MatchTimer extends React.Component {
   }
   render() {
     if (this.iamMounted) {
-      this.live = matchTimerCalculator(this.props.matchObj);
+      this.live = matchTimerCalculator(this.props.config);
       if (this.live) {
         this.seconds = this.live.seconds;
         if (!this.timerStarted) {
@@ -66,14 +66,14 @@ class MatchTimer extends React.Component {
       }
     }
     return (
-      <div className={this.props.matchObj.containerClass ? this.props.matchObj.containerClass : ''}>
+      <div className={this.props.config.containerClass ? this.props.config.containerClass : ''}>
         <span
-          className={`${this.props.matchObj.TimerClass ? this.props.matchObj.TimerClass : ''} un`}
-          id={`${this.props.matchObj.id}-countdown`}
+          className={`${this.props.config.TimerClass ? this.props.config.TimerClass : ''} un`}
+          id={`${this.props.config.id}-countdown`}
           style={{ display: this.live.showTimer ? 'inline-block' : 'none' }}
         />
         {this.live &&
-          <div className={this.props.matchObj.macthStatusTextClass ? this.props.matchObj.macthStatusTextClass : ''}>
+          <div className={this.props.config.macthStatusTextClass ? this.props.config.macthStatusTextClass : ''}>
             {!this.live.fullTime &&
               <span>Live</span>
             }
@@ -103,7 +103,7 @@ class MatchTimer extends React.Component {
 }
 
 MatchTimer.propTypes = {
-  matchObj: PropTypes.object,
+  config: PropTypes.object,
 };
 
 export default MatchTimer;
