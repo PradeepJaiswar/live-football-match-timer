@@ -24,7 +24,6 @@ const matchObj = {
   matchDate: '2018/12/12',
   id: '23',
   startTime: '13:00',
-  showLiveIndicator: true,
 };
 
 class YourComponent extends React.Component {
