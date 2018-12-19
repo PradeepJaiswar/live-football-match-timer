@@ -59,8 +59,12 @@ startTime | string | - |  match start time in 24 hour format hh:mm
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
-showLiveIndicator | boolen | false |  Show Live text beside timer
 eachHalfTime | number | 45 |  Each half Time
 halfBreakTime | number | 15 | -
 firstHalfExtraTime | number | 0 | -
 secondHalfExtraTime | number | 0 | -
+containerClass | string | null |  Container div class for component
+TimerClass | string | null |  Timer span class
+macthStatusTextClass | string | null |  Extra match status info div class for text Live/HT/FT and extra time with seconds
+
+

@@ -68,16 +68,14 @@ class MatchTimer extends React.Component {
     return (
       <div className={this.props.matchObj.containerClass ? this.props.matchObj.containerClass : ''}>
         <span
-          className="un"
+          className={`${this.props.matchObj.TimerClass ? this.props.matchObj.TimerClass : ''} un`}
           id={`${this.props.matchObj.id}-countdown`}
           style={{ display: this.live.showTimer ? 'inline-block' : 'none' }}
         />
         {this.live &&
-          <div className={this.props.matchObj.textHolderClass ? this.props.matchObj.textHolderClass : ''}>
-            {!this.live.fullTime && this.props.matchObj.showLiveIndicator &&
-              <span id={`${this.props.matchObj.id}-live`} className={this.props.matchObj.LiveHolderClass ? this.props.matchObj.LiveHolderClass : ''}>
-                Live
-              </span>
+          <div className={this.props.matchObj.macthStatusTextClass ? this.props.matchObj.macthStatusTextClass : ''}>
+            {!this.live.fullTime &&
+              <span>Live</span>
             }
             {this.live.halfTime &&
               <span>&nbsp;HT</span>

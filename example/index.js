@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom';
 import MatchTimer from '../src/components/match-timer';
 
 const matchObj = {
-  matchDate: '2018/12/15',
+  matchDate: '2018/12/19',
   id: 'uniqueMatchIdentifier',
-  startTime: '21:30',
-  showLiveIndicator: true,
+  startTime: '21:00',
 };
 
 class Example extends React.Component {
